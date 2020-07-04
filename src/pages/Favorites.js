@@ -18,15 +18,15 @@ const Favorites =( { isLoaderVisible } )=>{
 		<Navigator />
 		<Container fluid bg='light'><Row>
 			<SimpleMessage />
-			<Col sm={12}><h1 className='text-center text-white m-5'>Favorites</h1></Col>
+			<Col sm={12}><h2 className='text-center text-white m-5 supershadow'>Favoritos</h2></Col>
 			<Col sm={12} className='mt-2 mb-2'>
-					<Card className='p-3 ml-5 mr-5 bg-white-soft'>
+					<Card className='p-3 bg-white-soft'>
 						<Container fluid><Row>
 							<Col sm={12}>
-								<h4 className='text-justify text-intro'>Aquí terá acesso a uma coleção das imagens e 
+								<p className='text-justify'>Aquí terá acesso a uma coleção das imagens e 
 								videos que clicou como favoritos da Galería. Para cada uma delas poderá descarregar,
 								colocar um titulo, ordenar ou apagar a imagem e ver alguma informação adicional.
-								</h4>
+								</p>
 							</Col>
 							<TableFavorites />
 						</Row></Container>

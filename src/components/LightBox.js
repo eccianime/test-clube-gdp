@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import Modal from 'react-bootstrap/Modal';
@@ -19,6 +19,7 @@ const LightBox =( { isLightBoxVisible, lightBoxInfo, hideLightBox, addToFavorite
 	return(
 		<Modal size="lg" show={isLightBoxVisible} onHide={ hideLightBox }>
 			<Modal.Body>
+				<Button variant='link' onClick={ hideLightBox } className='close-floating text-white'><i className='la la-times la-2x'></i></Button>
 				{ 
 					media_type === 'video' ?
 					<iframe title={ title } width="100%" height="400" src={ url }></iframe> :
@@ -29,10 +30,7 @@ const LightBox =( { isLightBoxVisible, lightBoxInfo, hideLightBox, addToFavorite
 				<p className="text-justify">{ explanation }</p>
 				{
 					origin === 'gallery' &&
-					<Fragment>
-						<Button variant='danger' className="mb-2 float-left" onClick={ hideLightBox }><i className='la la-times'></i> Fechar imagem</Button>
-						<Button variant='info' disabled={ isAddFavLoading } className="mb-2 float-right" onClick={ ()=>addToFavorites( lightBoxInfo ) }><i className='la la-star'></i> Adicionar aos Favoritos</Button>	
-					</Fragment>
+					<Button variant='info' disabled={ isAddFavLoading } className="mb-2 float-right" onClick={ ()=>addToFavorites( lightBoxInfo ) }><i className='la la-star'></i> Adicionar aos Favoritos</Button>	
 				}
 			</Modal.Body>
 		</Modal>

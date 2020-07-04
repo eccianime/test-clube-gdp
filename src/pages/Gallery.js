@@ -16,21 +16,21 @@ const Galeria =( { isLoaderVisible } )=>{
 	<Fragment>
 		{ isLoaderVisible && <Loader /> }
 		<Navigator />
-		<Container fluid bg='light'><Row>
+		<Container bg='light'><Row>
 			<SimpleMessage />
-			<Col sm={12}><h1 className='text-center text-white m-5'>Galeria APOD</h1></Col>
+			<Col sm={12}><h2 className='text-center text-white m-5 supershadow'>Galeria APOD</h2></Col>
 			<Col sm={12} className='mt-2 mb-2'>
-					<Card className='p-3 ml-5 mr-5 bg-white-soft'>
+					<Card className='p-3 bg-white-soft'>
 						<Container fluid><Row>
 							<Col sm={12}>
-								<h4 className='text-justify text-intro'>Aquí poderá ter acesso à&nbsp; 
+								<p className='text-justify'>Aquí poderá ter acesso à&nbsp; 
 								<b>APOD (Astronomy Picture of the Day)</b> ou <b>Imagem Astronômica do Dia</b>, 
 								que é uma API que mostra por cada día uma imagem diferente do universo com uma 
 								curta explicação escrita por um astrônomo profissional. Para reducir os tempos
 								de carga, já que as imagens são pesadas, decidiu-se reducir o tamanho da petição
 								ao servidor para um máximo de 6 imagens. Então, pode escolher o mês, o ano e o intervalo
 								de días que deseja ver.
-								</h4>
+								</p>
 							</Col>
 						</Row></Container>
 						<APOD />

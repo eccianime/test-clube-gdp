@@ -17,8 +17,17 @@
 body{
 	background-image: url(../images/world.jpg);
 	background-size: cover;
+	background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.supershadow{
+	text-shadow: 0px 2px 6px black, 0px -2px 6px black, 2px 0px 6px black, -2px 0px 6px black;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @keyframes scroll{
@@ -37,10 +46,6 @@ body{
 
 .img-responsive{
 	width: 100%;
-}
-
-.text-intro{
-	line-height: 35px;
 }
 
 .bg-dark-soft{
@@ -135,4 +140,9 @@ body{
 .table-favorites th span{
 	display: inline-flex;
 	cursor: pointer;
+}
+
+.close-floating{
+	position: absolute;
+    right: 10px;
 }
