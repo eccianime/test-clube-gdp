@@ -1,0 +1,138 @@
+@font-face{
+	font-family: 'NASA';
+	src: url(../fonts/NASA.ttf);
+}
+
+@font-face{
+	font-family: 'Montserrat';
+	src: url(../fonts/Montserrat-Regular.otf);
+}
+
+#root{
+	background-image: url(../images/infinite_bg.png) !important;
+    animation: 40s scroll infinite linear;
+    font-family: "Montserrat";
+}
+
+body{
+	background-image: url(../images/world.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes scroll{
+	100%{
+		background-position:0px 2000px;
+	}
+}
+
+.btn-link:hover {
+	text-decoration: none;
+}
+
+.nasa-text{
+	font-family: "NASA";
+}
+
+.img-responsive{
+	width: 100%;
+}
+
+.text-intro{
+	line-height: 35px;
+}
+
+.bg-dark-soft{
+	background-color: rgba(52, 58, 64, .8);
+	border-radius: 20px;
+}
+
+.bg-white-soft{
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.nav-item .nav-link, .nav-item .nav-link:hover{
+	border-color: #fff #fff rgb(121, 134, 203);
+	border-width: 4px;
+	color: black;
+}
+
+.nav-item .nav-link.active{
+	border-color: rgb(121, 134, 203) rgb(121, 134, 203) #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.fujiphoto{
+	margin: 5px;
+	padding: 5px 5px 10px;
+	background-color: white;
+	box-shadow: 0px 2px 10px black;
+	position: relative;
+}
+
+.overlay-responsive{
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba( 0,0,0,.5 );
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transition: .3s ease;
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fujiphoto:hover .overlay-responsive {
+	transform: scale(1);
+}
+
+.transform-right{
+	transform: rotate(3deg);
+}
+
+.transform-left{
+	transform: rotate(-3deg);
+}
+
+.spinner-loader{
+    position: fixed;
+    background: rgba(255,255,255,.8);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    width: 100%;    
+}
+
+.toast-message{
+	color: '#fff'; 
+	position: 'fixed';
+	right: 20;
+	top: 20;
+	z-index: 10000;
+}
+
+.toast-successo{
+	background-color: #28a745;
+}
+
+.toast-error{
+	background-color: #dc3545;
+}
+
+.table-favorites th span{
+	display: inline-flex;
+	cursor: pointer;
+}
