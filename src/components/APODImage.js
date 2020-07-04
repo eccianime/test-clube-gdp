@@ -7,7 +7,8 @@ import Image from 'react-bootstrap/Image';
 import * as actionTypes from '../actions/types';
 
 const APODImage =( {image, index, showLightBox } )=>{
-	const { date, hdurl, title, media_type } = image;
+	const { date, title, media_type } = image;
+	let { hdurl } = image;
 	const finalDate = {
 		base: new Date( `${date}T00:00:00-03:00` ),
 		treat: function() {
